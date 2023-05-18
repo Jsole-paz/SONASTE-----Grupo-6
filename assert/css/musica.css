@@ -95,7 +95,7 @@ dt {
     align-items: baseline;
     margin-top: 113px;
   } 
-
+  
   .bloque {
     align-items: center;
 
@@ -133,4 +133,10 @@ dt {
     background: #8360c3;  
     background: -webkit-linear-gradient(to right, #2ebf91, #8360c3); 
     background: linear-gradient(to right, #2ebf91, #8360c3); 
+  }
+  .boton1{
+    background: #887c83;
+    border-radius: 15px;
+    font-family: 'DM Serif Display', serif;
+
   }

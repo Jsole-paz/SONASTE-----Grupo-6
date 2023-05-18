@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <title>Recomendaciones</title>
+    <title>Musica</title>
 </head>
 <body>
     <div class="wrapper">
@@ -69,6 +69,15 @@
                         <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:37i9dQZF1DX9tPFwDMOaN1" width="600" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </aside>
                   </div>
+                  <dt>Extra!<center>
+                    <div id="app">
+                        <button v-on:click="boton" class="boton1">Obten una frase!</button>
+                        <div>
+                            <p v-for="pokemon in pokemons">{{pokemon.quote}}</p>
+                            <p v-for="pokemon in pokemons">{{pokemon.author}}</p>
+                        </div>
+                    </div>
+                  </center>  </dt>
             </dl>
         
             <footer class="footer">
@@ -83,7 +92,7 @@
                     </div>
                     <input type="checkbox" name="acepto" id="acepto">Aceptar terminos y condiciones
                     <br>
-                    <input type="submit" value="Recibir noticias">
+                    <input type="submit" value="Recibir noticias" class="boton1">
                   </form>
                   </section>
                 </dt></dl>
@@ -94,4 +103,29 @@
             </footer>
       </div>
 </body>
+<script type="module">
+  import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+  const URL = "https://web-series-quotes-api.deta.dev/quote/"; 
+  const CoreObject = {
+      data: function () {
+          return {
+              pokemons: null,
+          };
+      },
+
+      methods: {
+          boton: async function () {
+              try {
+                  let response = await fetch(URL);
+                  let data = await response.json();
+                  this.pokemons = data;
+              } catch (error) {
+                  console.log({ error });
+              }
+          },
+      },
+  };
+  const app = createApp(CoreObject);
+  app.mount("#app");
+</script>
 </html>
