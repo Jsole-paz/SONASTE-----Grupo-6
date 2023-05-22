@@ -12,4 +12,4 @@ Aylen Gabriela Frith ---> novedades.html
 <br>
 Jose Cruz ---> contacto.html 
 <br>
-La ultima integrante del grupo se abandono la cursada:  Victoria Oriana Pendre
+La ultima integrante del grupo abandonó la cursada:  Victoria Oriana Pendre
