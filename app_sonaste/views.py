@@ -33,7 +33,6 @@ class ArtistCreateView(ArtistBaseView,CreateView):
         "tipo": "Crear artista"
     }
 
-
 class ArtistUpdateView(ArtistBaseView,UpdateView):
     template_name = "artist_create.html"
     extra_context = {
