@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<main>
+    <div class="main-artist">
+        <h1>Estas seguro ue deseas borrar este artista?</h1>
+        <h2>{{artist.nombre}}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>{{form.as_p}}</div>
+            <input type="submit" value="{{ tipo }}" />
+        </form>
+
+        <a href="{% url 'artist:all' %}">Cancelar</a>
+    </div>
+</main>
+{% endblock %}

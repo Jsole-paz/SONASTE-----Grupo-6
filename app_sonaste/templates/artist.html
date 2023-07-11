@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<main>
+    <div class="main-artist">
+        <h1>Todos los artistas</h1>
+        <h2><a href="{% url 'artist:create' %}">CREAR ARTISTA</a></h2>
+        {% for artist in artist_list%}
+        <div class="list">
+            <span>
+                <p>{{forloop.counter}}</p>
+            </span>
+            <span>
+                <p>{{artist.nombre}}</p>
+            </span>
+            <span>
+                <label for="">Detalle: </label>
+                <a href="{% url 'artist:detail' artist.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Editar: </label>
+                <a href="{% url 'artist:update' artist.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Borrar: </label>
+                <a href="{% url 'artist:delete' artist.id %}">+</a>
+            </span>
+        </div>
+
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="StyleSheet" href="{% static './css/musica.css' %}">
+    <link rel="shortcut icon" href="{% static './media/imagenes/logo3.gif' %}" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <title>Musica</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <picture> 
+              <source srcset= "hidden" media="(max-width:700px)">
+              <img src="{% static './media/imagenes/logo4.gif' %}" alt="logo" width="350px" class="logo">  
+            </picture>
+
+            <nav>
+              <ul>
+                <li><a href="{% url 'home_page' %}">Home</a></li>
+                <li><a href="{% url 'musica_page' %}">Musica</a></li>
+                <li><a href="{% url 'novedades_page' %}">Novedades</a></l>
+                <li><a href="{% url 'contacto_page' %}">Contacto</a></li>
+             </ul>
+            </nav>
+        </header>
+            <dl>
+                <dt>Pop</dt>
+                <div class="wrapper">
+                    <article class="main">
+                            <p>El pop es un género musical ampliamente reconocido que se destaca por sus melodías pegajosas y producción pulida. Sus letras son accesibles y tratan temas universales, mientras que su sonido incorpora influencias de diferentes estilos musicales. A lo largo de la historia, ha habido icónicos artistas pop que han dejado un impacto duradero. El pop ha evolucionado con el tiempo, adaptándose a las tendencias y cambios en la industria musical.</p>  
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/veqwVln0KN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          </article>
+                    <aside class="aside aside-2">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:37i9dQZF1DWWqmEAq7L8jI" width="600" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </aside>
+                  </div>
+                <dt>Latina</dt>
+                <div class="wrapper">
+                    <article class="main">
+                      <p>La música latina actual ha experimentado un crecimiento masivo en popularidad y reconocimiento global. Los géneros como el reggaeton y el trap latino han dominado las listas de éxitos internacionales con artistas como Daddy Yankee, J Balvin, Bad Bunny y Karol G. Además, se ha producido una fusión de géneros tradicionales con elementos modernos en el pop latino. La música urbana, incluyendo el dembow y el dancehall, también está en auge con artistas como Natti Natasha, Rauw Alejandro y Anuel AA. Las colaboraciones internacionales han llevado la música latina a audiencias de todo el mundo, y la música actual también destaca por su reivindicación cultural y representación de la identidad latina. En resumen, la música latina actual es diversa, dinámica y ha dejado una marca significativa en la industria musical global.</p>  
+                      <center><blockquote class="twitter-tweet"><p lang="es" dir="ltr">La canción que podría escuchar <a href="https://twitter.com/hashtag/OnRepeat?src=hash&amp;ref_src=twsrc%5Etfw">#OnRepeat</a> por el resto de mi vida 🎶⬇️</p>&mdash; The Latin Recording Academy / Latin GRAMMYs (@LatinGRAMMYs) <a href="https://twitter.com/LatinGRAMMYs/status/1653435794856484864?ref_src=twsrc%5Etfw">May 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                      </center>
+                      </article>
+                    <aside class="aside aside-2">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:37i9dQZF1DX10zKzsJ2jva" width="600" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </aside>
+                  </div>
+                <dt>Electrónica</dt>
+                <div class="wrapper">
+                    <article class="main">
+                      <p>La música electrónica es un género que se caracteriza por el uso de instrumentos y sonidos generados electrónicamente. Surgió en los años 70 con pioneros como Kraftwerk y Giorgio Moroder. La música electrónica abarca una amplia variedad de estilos y subgéneros, y se produce utilizando software de producción musical y equipos electrónicos. Ha influido en la música pop y se ha convertido en parte de la cultura del clubbing y los festivales de música. Los avances tecnológicos han impulsado su desarrollo y permitido la creación de sonidos únicos y atmosféricos.</p>  
+                      <center><blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">As the sun goes down, painting the sky with shades of pink, orange and red. It&#39;s a magical moment that will be remembered forever. <a href="https://t.co/3UKmZkjg1i">pic.twitter.com/3UKmZkjg1i</a></p>&mdash; Tomorrowland (@tomorrowland) <a href="https://twitter.com/tomorrowland/status/1652974748417097730?ref_src=twsrc%5Etfw">May 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                       </center>
+                    </article>
+                    <aside class="aside aside-2">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:37i9dQZF1DXdDh4h59PJIQ" width="600" height="750" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </aside>
+                  </div>
+                <dt>Pop Coreano</dt>
+                <div class="wrapper">
+                    <article class="main">
+                      <p>El K-pop, o pop coreano, ha experimentado un éxito masivo a nivel mundial en los últimos años. Se destaca por su presencia global, con grupos como BTS y BLACKPINK liderando el camino. El K-pop se distingue por sus coreografías elaboradas, producción de alta calidad y videos musicales visualmente impactantes. Los grupos de K-pop presentan conceptos únicos y cuentan con fandoms dedicados que han contribuido al éxito del género. Además, el K-pop ha participado en colaboraciones internacionales, ampliando su alcance y presencia en la industria musical global.</p>  
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/UBURTj20HXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </article>
+                    <aside class="aside aside-2">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:37i9dQZF1DX9tPFwDMOaN1" width="600" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </aside>
+                  </div>
+                  <dt>Extra!<center>
+                    <div id="app">
+                        <button v-on:click="boton" class="boton1">Obten una frase!</button>
+                        <div>
+                            <p v-for="pokemon in pokemons">{{pokemon.quote}}</p>
+                            <p v-for="pokemon in pokemons">{{pokemon.author}}</p>
+                        </div>
+                    </div>
+                  </center>  </dt>
+            </dl>
+        
+            <footer class="footer">
+              <article class="main-footer">
+                <dl><dt>
+                  <center><p class="dt-2">Suscripción al newsletter</p></center>
+                  <section>
+                    <form action="#" method="GET">
+                    <div>
+                      <label for="email">Correo electrónico</label>
+                      <input type="email" name="email" id="email required">
+                    </div>
+                    <input type="checkbox" name="acepto" id="acepto" required>Aceptar terminos y condiciones
+                    <br>
+                    <input type="submit" value="Recibir noticias" class="boton1">
+                  </form>
+                  </section>
+                </dt></dl>
+            </article>
+            <aside class="aside aside-2-footer">
+                <dl><dt>sonaste@musica.com</dt></dl>
+            </aside>
+            </footer>
+      </div>
+</body>
+<script type="module">
+  import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+  const URL = "https://web-series-quotes-api.deta.dev/quote/"; 
+  const CoreObject = {
+      data: function () {
+          return {
+              pokemons: null,
+          };
+      },
+
+      methods: {
+          boton: async function () {
+              try {
+                  let response = await fetch(URL);
+                  let data = await response.json();
+                  this.pokemons = data;
+              } catch (error) {
+                  console.log({ error });
+              }
+          },
+      },
+  };
+  const app = createApp(CoreObject);
+  app.mount("#app");
+</script>
+</html>
