@@ -1,16 +1,17 @@
-{% extends 'contacto.html' %}
+{% extends 'index.html' %}
 {% block content %}
 
 <main>
-    <div class="main-artist">
-        <h1>CREAR ARTISTA</h1>
+    <div class="main-user">
+        <h1>Estas seguro ue deseas borrar este usuario?</h1>
+        <h2>{{usuario.nombre}}</h2>
         <form method="post">
             {% csrf_token %}
             <div>{{form.as_p}}</div>
             <input type="submit" value="{{ tipo }}" />
         </form>
 
-        <a href="{% url 'artist:all' %}">Volvamos al Inicio</a>
+        <a href="{% url 'user:all' %}">Cancelar</a>
     </div>
 </main>
 {% endblock %}

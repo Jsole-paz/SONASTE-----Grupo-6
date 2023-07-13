@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Artist
+from .models import User
 
-class ArtistSerializer(ModelSerializer):
+class UserSerializer(ModelSerializer):
     class Meta:
-        model = Artist
+        model = User
         fields = "__all__"

@@ -1,30 +1,30 @@
-{% extends 'contacto.html' %}
+{% extends 'index.html' %}
 
 {% block content %}
 
 <main>
-    <div class="main-artist">
-        <h1>Todos los artistas</h1>
-        <h2><a href="{% url 'artist:create' %}">CREAR ARTISTA</a></h2>
-        {% for artist in artist_list%}
+    <div class="main-user">
+        <h1>Todos los usuarios</h1>
+        <h2><a href="{% url 'user:create' %}">CREAR USUARIO</a></h2>
+        {% for user in user_list %}
         <div class="list">
             <span>
                 <p>{{forloop.counter}}</p>
             </span>
             <span>
-                <p>{{artist.nombre}}</p>
+                <p>{{user.nombre}}</p>
             </span>
             <span>
                 <label for="">Detalle: </label>
-                <a href="{% url 'artist:detail' artist.id %}">+</a>
+                <a href="{% url 'user:detail' user.id %}">+</a>
             </span>
             <span>
                 <label for="">Editar: </label>
-                <a href="{% url 'artist:update' artist.id %}">+</a>
+                <a href="{% url 'user:update' user.id %}">+</a>
             </span>
             <span>
                 <label for="">Borrar: </label>
-                <a href="{% url 'artist:delete' artist.id %}">+</a>
+                <a href="{% url 'user:delete' user.id %}">+</a>
             </span>
         </div>
 

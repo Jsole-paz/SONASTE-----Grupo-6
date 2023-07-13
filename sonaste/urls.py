@@ -25,5 +25,5 @@ urlpatterns = [
     path('Musica', MusicaView.as_view(), name = 'musica_page'),
     path('Novedades', NovedadesView.as_view(), name = 'novedades_page'),
     path('Contacto', ContactoView.as_view(), name = 'contacto_page'),
-    path('artist/', include('app_sonaste.urls'))
+    path('User/', include('app_sonaste.urls'))
 ]

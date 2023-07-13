@@ -19,11 +19,17 @@
 <body>
   <div class="wrapper">    
     <header class="header">
+      
       <picture> 
         <img src="{% static './media/imagenes/logo4.gif' %}" alt="logo" width="250px" class="logo"> 
       </picture>
       <nav>
         <ul>
+
+          <div class="app">
+            <a href="User">Inicio</a>
+          </div>
+          
           <li><a href="{% url 'home_page' %}">Home</a></li>
           <li><a href="{% url 'musica_page' %}">Musica</a></li>
           <li><a href="{% url 'novedades_page' %}">Novedades</a></l>

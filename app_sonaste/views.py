@@ -2,45 +2,45 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import View
 
+
 from django.views.generic.list import ListView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.views.generic.detail import DetailView
 
 
-from .models import Artist
+from .models import User
 
 # Create your views here.
 
-
-class ArtistBaseView(View):
-    template_name = 'artist.html'
-    model = Artist
+class UserBaseView(View):
+    template_name = 'user.html'
+    model = User
     fields = '__all__'
-    success_url = reverse_lazy('atist:all')
+    success_url = reverse_lazy('user:all')
 
-
-class ArtistListView(ArtistBaseView,ListView):
+class UserListView(UserBaseView,ListView):
+    
     """
-    ESTO ME PERMITE CREAR UNA VISTA CON LOS VINOS
+    ESTO ME PERMITE CREAR UNA VISTA 
     """
 
-class ArtistDetailView(ArtistBaseView,DetailView):
-    template_name = "artist_detail.html"
+class UserDetailView(UserBaseView,DetailView):
+    template_name = "user_detail.html"
 
-class ArtistCreateView(ArtistBaseView,CreateView):
-    template_name = "artist_create.html"
+class UserCreateView(UserBaseView,CreateView):
+    template_name = "user_create.html"
     extra_context = {
-        "tipo": "Crear artista"
+        "tipo": "Crear usuario"
     }
 
-class ArtistUpdateView(ArtistBaseView,UpdateView):
-    template_name = "artist_create.html"
+class UserUpdateView(UserBaseView,UpdateView):
+    template_name = "user_create.html"
     extra_context = {
-        "tipo": "Actualizar artista"
+        "tipo": "Actualizar usuario"
     }
 
-class ArtistDeleteView(ArtistBaseView,DeleteView):
-    template_name = "artist_delete.html"
+class UserDeleteView(UserBaseView,DeleteView):
+    template_name = "user_delete.html"
     extra_context = {
-        "tipo": "Borrar artista"
+        "tipo": "Borrar usuario"
     }

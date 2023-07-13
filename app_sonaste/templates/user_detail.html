@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<main>
+    <div class="main-user">
+        <h1>{{user.nombre}}</h1>
+        {% for label, value in user.get_fields %}
+
+        <p>{{label | upper}}</p>
+        <p>{{value}}</p>
+
+        {% endfor %}
+
+        <a href="{% url 'user:all' %}">BACK</a>
+    </div>
+</main>
+{% endblock %}

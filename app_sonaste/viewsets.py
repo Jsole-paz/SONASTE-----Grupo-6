@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Artist
-from .serializers import ArtistSerializer
+from .models import User
+from .serializers import UserSerializer
 
-class ArtistViewSet(ModelViewSet):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class UserViewSet(ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

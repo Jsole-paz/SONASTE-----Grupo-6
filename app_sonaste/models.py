@@ -1,15 +1,15 @@
 from django.db import models
 
-class Artist(models.Model):
+class User(models.Model):
     class Meta:
-         db_table = 'artist_table'
+         db_table = 'user_table'
 
-    nombre  =  models.CharField(max_length=200)
-    rating = models.PositiveSmallIntegerField(blank=False,null=False)
-    abv = models.FloatField(blank=True, null=True)
+    user  =  models.CharField(max_length=200)
+    password  =  models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
 
 def __str__(self):
-    return f"El nombre: {self.nombre}, Rating {self.abv}"
+    return f"El nombre es : {self.user}, su correo es {self.email}"
 
 def get_fields(self):
     return [
